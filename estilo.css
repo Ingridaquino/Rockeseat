@@ -1,0 +1,307 @@
+/* ====== RESET  ================================ */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box ;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+} 
+
+/* ====== VARIAVEIS ================================ */
+:root{
+    --header-height: 4.5rem;
+
+    /* colors */
+    --hue: 159;
+    /* HSL color mode */
+    --base-color: hsl(var(--hue) 36% 57%);
+    --base-color-second: hsl(var(--hue) 65% 88%);
+    --base-color-alt: hsl(var(--hue) 57% 53%);
+    --title-color: hsl(var(--hue) 41% 10%);
+    --text-color: hsl(0 0% 46%);
+    --text-color-light: hsl(0 0% 98%);
+    --body-color: hsl(0 0% 98%);
+}
+
+/* ====== BASE ================================ */
+body{
+    font: 400 1REM 'DM Sans', sans-serif;
+    color: var(--text-color);
+    background: var(--body-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+.title{
+    font: 700 1.81rem 'Poppins', sans-serif;
+    color: var(--title-color);
+    -webkit-font-smoothing: auto;
+}
+
+.button{
+    display: inline-flex;
+    align-items: center;
+    background: var(--base-color);
+    color: var(--text-color-light);
+    height: 2.5rem;
+    padding: 0 1rem;
+    border-radius: 0.55rem 0.85rem;
+    transition: background 0.4s;
+}
+
+.button:hover{
+    background: rgb(10, 138, 131);
+}
+
+.divider-1{
+    height: 1px;
+    background: linear-gradient(205deg,hsla(var(--hue), 36%, 57%, 1) 0%, 
+    hsla(var(--hue), 65%, 88%, 0,34) 100%); 
+}
+
+
+
+/* ====== LAYOUT  ================================ */
+.container{
+    width: 100%;
+    margin-left: 1.5rem; /* 24px */
+    margin-right: 1.5rem;
+}
+
+.grid{
+    display: grid;
+    gap:2rem;
+}
+
+.section{
+    padding: 5rem 0;
+}
+
+#header{
+   border-bottom: 1px solid #e4e4e4;
+   margin-bottom: 2rem;
+   display: flex;
+   
+   /*Para deixar o menu fixo */
+   width: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   background-color: var(--body-color) ;
+}
+
+main{
+    /*Para desgrudar o conteudo do menu */
+    margin-top: calc(var(--header-height) + 2rem);
+}
+
+/* ====== lOGO================================ */
+.logo{
+   font: 700 1.32rem 'Poppins', sans-serif;
+   color: var(--title-color);
+
+}
+.logo span{
+    color: var(--base-color);
+}
+
+/* ====== NAVIGATION ================================ */
+.doe{
+    color: var(--base-color);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    height: 4.5rem;
+    width: 100%;
+}
+
+nav ul li a{
+    transition: color 0.3s; /* Colocar o color, para ocorrer a transição somente na cor */
+    position: relative;
+}
+
+nav ul li a:hover{
+    color: var(--base-color);
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0%; /*Para dar o efeito dele crescendo */
+    height: 2px;
+    background: var(--base-color);
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    transition: width 0.2s;  /*Para dar o efeito dele crescendo */
+}
+nav ul li a:hover::after{
+    width: 100%;  /*Para dar o efeito dele crescendo */
+}
+
+nav ul li{
+    text-align: center;
+}
+
+/* Mostrar o menu no responsivo */
+nav .menu {
+    opacity: 0;
+    visibility: hidden;
+}
+
+nav.show .menu{
+    opacity: 1;
+    visibility: visible;
+
+    background: var(--body-color);
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed; /*Para criar uma linha acima foto */
+    top: 0;
+    left: 0;
+}
+nav.show .menu{
+    display: grid;
+    place-content: center;
+}
+
+nav.show ul.grid {
+    gap:4rem;
+}
+
+/* ====== Toogle menu ================================ */
+.toggle{
+    color: var(--base-color);
+    font-family: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+nav span.icon-close-877{
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    right: 1.5rem;
+    
+}
+
+nav.show span.icon-close-877{
+    visibility: visible;
+    opacity: 1;
+
+}
+/* ====== HOME ================================ */
+#home{
+    overflow: hidden;
+}
+
+#home .container{
+    margin: 0;
+    
+}
+
+#home .image{
+    position: relative;
+}
+
+#home .image::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--base-color-second);
+    position: absolute;
+    top: -16.8%;
+    left: 16.7%;
+    z-index: -1; /* ´Fica atrás da imagem */
+}
+
+#home .image img,
+#home .image::before{
+    border-radius: 0.25rem;
+}
+
+#home .image img{
+    position: relative;
+    right: 2.93rem;
+}
+
+#home .text{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-align: center;
+}
+
+#home .text h1{
+    margin-bottom: 1rem;
+}
+
+
+#home .text p{
+    margin-bottom: 2rem;
+}
+
+#home .text span{
+    color: var(--base-color);
+}
+
+/* ====== ABOUT ================================ */
+
+#about .container{
+    margin: 0;
+    
+}
+
+#about .image{
+    position: relative;
+}
+
+#about .image::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--base-color-second);
+    position: absolute;
+    top: -9.3%;
+    left: -33%;
+    z-index: -1; /* ´Fica atrás da imagem */
+}
+
+#about .image img,
+#about .image::before{
+    border-radius: 0.25rem;
+}
+
+#about .image img{
+    position: relative;
+   
+}
+
+#about .text{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-align: center;
+}
+
+#about .text p{
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+#about .text h2{
+    margin-bottom: 1rem;
+}
