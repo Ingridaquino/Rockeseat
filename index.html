@@ -5,18 +5,25 @@
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!--Icones-->
+            <link rel="stylesheet" href="Assets/fonts/style.css">
+              <!-- Swiper -->
+                <link
+                rel="stylesheet"
+                href="https://unpkg.com/swiper/swiper-bundle.min.css"
+                />
+
+            <!--style-->
+            <link rel="stylesheet" href="estilo.css">
+            <!--Fonts-->
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-            <!--Icones-->
-            <link rel="stylesheet" href="https://i.icomoon.io/public/temp/e7058b0759/UntitledProject1/style.css">
-            <link rel="stylesheet" href="Assets/fonts/style.css">
-            <link rel="stylesheet" href="estilo.css">
+            <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"> 
             <title>Squirtle</title>
         </head>
         <body>
             <!--Menu-->
-            <header id="header">
+            <header id="header" class="scroll">
                 <nav class="container">
                     <a class="logo" href="#">Squi<span>rtle</span></a>
                     <div class="menu">
@@ -54,7 +61,7 @@
                  <!--fim da Home-->
                  <div class="divider-1"></div>
 
-
+                <!--About-->
                 <section class="section" id="about">
                     <div class="container grid">
                         <div class="image"><img src="img/volu2.jpg" alt=""></div>
@@ -67,29 +74,167 @@
                         </div>
                     </div>
                 </section>
+                 <!--fim do About-->
 
+                <div class="divider-2"></div> <!--Para fazer a linha em gradiente */--> 
 
+                 <!--SERVICES-->
+                <section class="section" id="services">
+                    <div class="container grid">
+                        <header>
+                            <h2 class="title">Serviços</h2>
+                            <p>Fundada desde 2001, o <strong>Squirte</strong> já limpou mais de
+                            1 tonela de lixos do Oceano.
+                            </p>
+                        </header>
+                        <div class="cards grid">
+                            <div class="card">
+                                <i class="icon-animal_aquatic_nature_ocean_sea_icon"></i>
+                                    <h3 class="title">Projeto</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Assumenda alias exercitationem repudiandae magnam, provident 
+                                    quidem nostrum esse. Dolorum?</p> 
+                            </div>
+                            <div class="card">
+                                <i class="icon-turtle-svgrepo-com"></i>
+                                    <h3 class="title">Conteúdo</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Assumenda alias exercitationem repudiandae magnam, provident 
+                                    quidem nostrum esse. Dolorum?</p>
+                            </div>
+                            <div class="card">
+                                <i class="icon-reshot-icon-crab-6DLGZ5Q3EF1"></i>
+                                    <h3 class="title">Doe</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Assumenda alias exercitationem repudiandae magnam, provident 
+                                    quidem nostrum esse. Dolorum?</p>  
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                 <!--FIM DO SERVICES-->
+                 <div class="divider-1"></div>
+                 <!--TESTIMONIALS-->
+                <section class="section" id="testimonials">
+                    <div class="container">
+                        <header>
+                            <h2 class="title">Depoimentos dos voluntários</h2>
+                            <p></p>
+                        </header>
+                        <div class="testimonials swiper-container swiper mySwiper">
+                            <div class="swiper-wrapper"> 
+                                <div class="testimonial swiper-slide">
+                                    <blockquote>
+                                        <p>
+                                            <span>&ldquo;</span>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                            Deleniti atque sit, veniam earum aperiam nesciunt asperiores 
+                                            officia porro odit unde perspiciatis commodi ipsum, sunt quidem 
+                                            eligendi sint harum hic nisi!
+                                        </p>
+                                        <cite>
+                                            <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Christian Moutinho">
+                                            Christian Moutinho 
+                                        </cite>
+                                    </blockquote>
+                                </div>
 
+                                <div class="testimonial swiper-slide">
+                                    <blockquote>
+                                        <p>
+                                            <span>&ldquo;</span>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                            Deleniti atque sit, veniam earum aperiam nesciunt asperiores 
+                                            officia porro odit unde perspiciatis commodi ipsum, sunt quidem 
+                                            eligendi sint harum hic nisi!
+                                        </p>
+                                        <cite>
+                                            <img src="https://randomuser.me/api/portraits/women/89.jpg" alt="Nayra Sobreira">
+                                            Nayra Sobreira
+                                        </cite>
+                                    </blockquote>
+                                </div>
 
+                                <div class="testimonial swiper-slide">
+                                    <blockquote>
+                                        <p>
+                                            <span>&ldquo;</span>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                            Deleniti atque sit, veniam earum aperiam nesciunt asperiores 
+                                            officia porro odit unde perspiciatis commodi ipsum, sunt quidem 
+                                            eligendi sint harum hic nisi!
+                                        </p>
+                                        <cite>
+                                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Leticia Meireles">
+                                            Leticia Meireles 
+                                        </cite>
+                                    </blockquote>      
+                                </div>
 
-                <section class="section"></section>
-                <section class="section"></section>
+                                <div class="testimonial swiper-slide">
+                                    <blockquote>
+                                        <p>
+                                            <span>&ldquo;</span>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                            Deleniti atque sit, veniam earum aperiam nesciunt asperiores 
+                                            officia porro odit unde perspiciatis commodi ipsum, sunt quidem 
+                                            eligendi sint harum hic nisi!
+                                        </p>
+                                        <cite>
+                                            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Eduard Lobato">
+                                            Eduard Lobato
+                                        </cite>
+                                    </blockquote>    
+                                </div>  
+                            </div>      
+                            <!-- If we need pagination -->   
+                            <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"></div>
+                        </div>
+                    </div>
+                </section>
+                 <!--FIM DO TESTIMONIALS-->
+                 <div class="divider-2"></div>
+                <!-- CONTACT -->
+                <section class="section" id="contact">
+                    <div class="container grid">
+                        <div class="text">
+                            <h2 class="title">Entre em contato com a gente!</h2>
+                            <p>
+                            Entre em contato com o Squirtle, queremos tirar suas dúvidas.
+                            </p>
+                            <a
+                            href="https://api.whatsapp.com/send?phone=+5598585878&text=Oi! Gostaria de ser um voluntário"
+                            class="button"
+                            target="_blank"
+                            ><i class="icon-whatsapp"></i> Entrar em contato</a>
+                        </div>
+
+                        <div class="links">
+                            <ul class="grid">
+                            <li><i class="icon-mail"></i> contato@ongsquirtle.com</l>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                  <footer></footer>
             </main>
+                <!-- swiper -->
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+            <script>
+                const swiper = new Swiper('.swiper-container', {
+                    slidesPerView: 1,
+                    pagination: {
+                        el: '.swiper-pagination'
+                    },
+                    mousewheel: true,
+                    keyboard: true
+                })
+            </script>
+            <!-- scrollreveal -->
+            <script src="https://unpkg.com/scrollreveal"></script>
 
-            <script src="main.js"></script>
-
-            <footer></footer>
-
-
-
-
-           
-
-
-
-
-            
-           
+            <!-- main.js -->
+            <script src="./main.js"></script>
         </body>
     </html>
 
