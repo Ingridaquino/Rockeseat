@@ -32,6 +32,10 @@ img{
     --text-color: hsl(0 0% 46%);
     --text-color-light: hsl(0 0% 98%);
     --body-color: hsl(0 0% 98%);
+
+    /*fonts responsivo */
+    --title-font-size: 1.875rem;
+    --subtitle-font-size: 1rem;
 }
 
 /* ====== BASE ================================ */
@@ -97,13 +101,15 @@ body{
 }
 
 .section{
-    padding: 5rem 0;
+    padding: calc(5rem + var(--header-height))  0;
 }
 
 .section .title{
     margin-bottom: 1rem;
 }
-
+.section .subtitle{
+    font-size: var(--subtitle-font-size);
+}
 /* Serviços -------- */
 .section header{
     margin-bottom: 3rem;
@@ -131,10 +137,6 @@ body{
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.658);
 }
 
-main{
-    /*Para desgrudar o conteudo do menu */
-    margin-top: calc(var(--header-height) + 2rem);
-}
 
 /* ====== lOGO================================ */
 .logo{
@@ -146,6 +148,10 @@ main{
     color: var(--base-color);
 }
 
+.logo-alt span{
+    color: var(--body-color);
+}
+
 /* ====== NAVIGATION ================================ */
 .doe{
     color: var(--base-color);
@@ -155,7 +161,7 @@ nav{
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    height: 4.5rem;
+    height: var(--header-height);
     width: 100%;
 }
 
@@ -320,7 +326,7 @@ nav.show span.icon-close-877{
     position: absolute;
     top: -9.3%;
     left: -33%;
-    z-index: -1; /* ´Fica atrás da imagem */
+    z-index: 0; /* ´Fica atrás da imagem */
 }
 
 #about .image img,
@@ -466,3 +472,80 @@ nav.show span.icon-close-877{
     color: var(--base-color);
   }
   
+
+  /* ====== Footer================================ */
+  footer{
+      background:var(--base-color);
+  }
+
+  footer .brand .logo{
+      display: inline-block;
+      margin-bottom: 1.5rem;
+  }
+
+  footer .brand p{
+      color: var(--text-color-light);
+      margin-bottom: 0.75rem;
+  }
+
+  footer i{
+      font-size: 2.5rem;
+      color: var(--text-color-light);
+  }
+
+  footer .social a {
+      display: inline-block; /*Pois o a é inline, ele não recebe o efeito*/
+      margin-right: 2rem;
+      transition: .5s; /*Para dar efeito no icon da rede social*/
+  }
+
+  footer .social a:hover{
+      transform: translateY(-8px);
+  }
+
+  /*back to top */
+.icon-reshot-icon-oceans-E7Q6JK5Z241{
+    font-size: 2rem;
+}
+
+.back-to-top{
+    background:rgb(11, 88, 88);
+    color: var(--text-color-light);
+
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+
+    padding: .5rem;
+    clip-path: circle();
+    line-height: 0;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    transform:translateY(100%);
+  }
+
+.back-to-top.show{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ======= RESPONSIVO - MEDIA QUERIES ================================= */
+/* EXTRA LARGE DEVICES: +1200 > */
+@media (min-width: 1200px){
+    main{
+        /*Para desgrudar o conteudo do menu */
+        margin-top: var(--header-height);
+    }
+}
+/* Large devices: +1023 >*/
+/* Large devices: +992 >*/
+@media (min-width: 992px){
+    :root{
+        --title-font-size: 2.25rem;
+        --subtitle-font-size: 1.125rem;
+    }
+}
+/* Medium devices: +767 >*/
