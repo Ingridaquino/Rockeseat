@@ -478,6 +478,10 @@ nav.show span.icon-close-877{
       background:var(--base-color);
   }
 
+  footer.section{
+      padding: 3rem 0;
+  }
+
   footer .brand .logo{
       display: inline-block;
       margin-bottom: 1.5rem;
@@ -535,6 +539,50 @@ nav.show span.icon-close-877{
 /* ======= RESPONSIVO - MEDIA QUERIES ================================= */
 /* EXTRA LARGE DEVICES: +1200 > */
 @media (min-width: 1200px){
+    .container{
+        max-width: 1120px;
+        margin-left: auto ;
+        margin-right: auto;
+    }
+
+    .section{
+        padding: 10rem 0;
+    }
+    /*Menu*/
+    nav .menu{
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+    }
+
+    nav .menu ul{
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav .menu ul li a.title{
+        font: 400 1rem 'Poppins', sans-serif;
+    }
+
+    nav  .icon-open-menu-6208{
+        display: none;
+    }
+    /*Home*/
+    #home .container{
+        grid-auto-flow: column;
+         margin: 0 auto;
+    }
+    
+    #home .image{
+        order: 1;
+    }
+
+    #home .text{
+        order: 0;
+        max-width: 24rem;
+        text-align: left;
+    }
+
     main{
         /*Para desgrudar o conteudo do menu */
         margin-top: var(--header-height);
